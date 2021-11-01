@@ -1,24 +1,23 @@
+//linear search
 
 #include<stdio.h>
-void main()
-{
-  int flag=1;
-  char ch;
-  while(1)
-  {
-    printf("input the character:");
-    scanf("%c",&ch);  
-    if(ch>='A' && ch<='Z'){
-      printf("The character %c is capital letter\n",ch);
-      getchar();
-    }  
-    else if(ch >= 'a' && ch <= 'z'){
-      printf("The character %c is Small letter\n",ch);
-      getchar();
-    }
-    else{
-      printf("Wrong input\n");
-      getchar();
+void main(){
+  int i,j,s,n,A[50];
+  printf("input the no. of elements in the array: ");
+  scanf("%d",&n);
+  printf("Input the elements of array: ");
+  for(i=0; i<n; i++){
+    scanf("%d",A+i);
+  }
+  printf("Input the no. to be searched: ");
+  scanf("%d",&s);
+  for(i=0; i<n ; i++){
+    if(A[i]==s){
+      printf("\nThe given no. is found at %d th position",i+1);
+      break;
     }
   }
+  if(i==n)
+    printf("The no. not found...\n");
+
 }
